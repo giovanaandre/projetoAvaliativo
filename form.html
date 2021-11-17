@@ -1,34 +1,101 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>formulario</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="_css/stilo.css">
-	<link rel="stylesheet" type="text/css" href="">
+	<script type="text/javascript" src="controller.js"></script>
+	<title>FORMULÁRIO</title>
 </head>
-<body>
-	<H1>Formulário</H1>
- <a href="index.html">Voltar</a>
- <form>
-    <p>Nome</p>
-	<input type="text" name="Nome">
-	<br>
-	<p>Email</p>
-	<input type="Email" name="email" placeholder="email@email.com">
-	<br>
-	<p>Celular</p>
-	<input type="number" name="Celular" placeholder="(043) 91234-5678">
-	<br>
-	<p>Cpf</p>
-	<input type="number" name="Cpf" placeholder="123.456.789-01">
-	<p>Assunto</p>
-	<input type="text" name="">
-	<br>
-	<p>Detalhes</p>
-	<input type="text" name="">
-	<br>
-	<p><button>enviar</button></p>
+
+<body> 
+	<h1>FORMULÁRIO</h1>
+	<hr>
+	<h2><a href="conteudo.html">Voltar</a></h2>
+	<hr>
+	<form>
+		<p> NOME </p>
+		<input id="nome" type="text" placeholder="Informe seu nome...">
+		<p>GENERO</p>
+		<select class="form-select" id="genero">
+			<option selected>Selecionar</option>
+			<option value="1">Masculino</option>
+			<option value="2">Feminino</option>
+			<option value="3">Outro</option>
+		</select>
+	<p>DATA DE NASCIMENTO</p>
+	<input id="dtnasc" type="date" placeholder="Informe sua data de nascimento...">
+	<p>FONE</p>
+	<input id="fone" type="tel" placeholder="Informe seu telefone...">
+	<p>TIPO DE PESSOA</p>
+	<div class="form-check">
+		<input id="pessoafisica" class="form-check-input" type="checkbox">
+		<label class="form-check-label" for="flexCheckDefault"> Pessoa Fisica </label>
 	</div>
-    
- 	</form>
-   </body>
+	<div class="form-check">
+		<input id="pessoajuridica" class="form-check-input" type="checkbox" value="" >
+		<label class="form-check-label" for="flexCheckChecked"> Pessoa Juridica </label>
+	</div>
+	<p>CPF</p>
+	<input id="cpf" type="cpf" placeholder="Informe seu CPF...">
+	<div class="col-md-4"><br>
+		<p>E-MAIL</p>
+		<input id="email" type="email" placeholder="Informe seu e-mail...">
+		<p>SENHA</p>
+		<div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label"></label>
+			<input id="senha" type="password" class="form-control" placeholder="Informe sua senha...">
+		</div>
+		<br>
+		<p>ESTADO</p>
+		<br> 
+		<select id="estado" class="form-select">
+			<option selected>Selecione</option>
+			<option>Acre (AC)</option>
+			<option>Alagoas (AL)</option>
+			<option>Amapá (AP)</option>
+			<option>Amazonas (AM)</option>
+			<option>Bahia (BA)</option>
+			<option>Ceará (CE)</option>
+			<option>Distrito Federal (DF)</option>
+			<option>Espírito Santo (ES)</option>
+			<option>Goiás (GO)</option>
+			<option>Maranhão (MA)</option>
+			<option>Mato Grosso (MT)</option>
+			<option>Mato Grosso do Sul (MS)</option>
+			<option>Minas Gerais (MG)</option>
+			<option>Pará (PA)</option>
+			<option>Paraíba (PB)</option>
+			<option>Paraná (PR)</option>
+			<option>Pernambuco (PE)</option>
+			<option>Piauí (PI)</option>
+			<option>Rio de Janeiro (RJ)</option>
+			<option>Rio Grande do Norte (RN)</option>
+			<option>Rio Grande do Sul (RS)</option>
+			<option>Rondônia (RO)</option>
+			<option>Roraima (RR)</option>
+			<option>Santa Catarina (SC)</option>
+			<option>São Paulo (SP)</option>
+			<option>Sergipe (SE)</option>
+			<option>Tocantins (TO)</option>
+		</select>
+	</div><br>
+	<p>CIDADE</p>
+	<input id="cidade" type="city" placeholder="Informe sua cidade...">
+	<p> ENDEREÇO </p>
+	<input id="endereco" type="text" class="form-control" placeholder="Rua/Avenida, Número">
+	<p>CEP</p>
+	<input id="cep" type="cep" placeholder="Informe seu CEP...">
+	<p>ASSUNTO</p>
+	<input id="ASSUNTO" type="text">
+	<p>DETALHES</p>
+	<textarea rows="10" cols="40" maxlength="500"></textarea>
+	<div class="form-check">
+		<input id="notificacoes" class="form-check-input" type="checkbox" value=""checked>
+		<label class="form-check-label" for="flexCheckChecked"> Aceito receber notificações </label> <br></br>
+	</div>	
+	<button class="btn btn-primary" onclick="verificar()" nome="cadastrar">Cadastrar</button>
+	</form>
+</body>
 </html>
+
