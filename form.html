@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="_css/stilo.css">
-	<script type="text/javascript" src="controller.js"></script>
+	<script type="text/javascript" src="_js/validacao.js"></script>
 	<title>FORMULÁRIO</title>
 </head>
 
@@ -26,7 +26,7 @@
 	<p>DATA DE NASCIMENTO</p>
 	<input id="dtnasc" type="date" placeholder="Informe sua data de nascimento...">
 	<p>FONE</p>
-	<input id="fone" type="tel" placeholder="Informe seu telefone...">
+	<input type="tel" id="fone" name="fone" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="(15) 99659-3716" maxlength="11" onblur="maskFone()">
 	<p>TIPO DE PESSOA</p>
 	<div class="form-check">
 		<input id="pessoafisica" class="form-check-input" type="checkbox">
@@ -94,7 +94,7 @@
 		<input id="notificacoes" class="form-check-input" type="checkbox" value=""checked>
 		<label class="form-check-label" for="flexCheckChecked"> Aceito receber notificações </label> <br></br>
 	</div>	
-	<button class="btn btn-primary" onclick="verificar()" nome="cadastrar">Cadastrar</button>
+	<button class="btn btn-primary" onclick="verificar()">Cadastrar</button>
 	</form>
 </body>
 </html>
